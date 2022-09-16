@@ -1,5 +1,5 @@
-name: 'action-repoman'
-description: 'Run repoman on a repository'
+name: 'action-pkgcheck-ci'
+description: 'Run pkgcheck ci on a repository'
 runs:
   using: 'docker'
   image: 'Dockerfile'
