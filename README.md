@@ -1,10 +1,10 @@
-# action-repoman
+# action-pkgcheck-ci
 
-Automatically run repoman on a repository and report QA errors.
+Automatically run pkgcheck ci on a Gentoo Overlay and report all QA errors.
 
 ## Basic Usage
 
-An example workflow to run [repoman](https://wiki.gentoo.org/wiki/Repoman) on an overlay after every `push`
+An example workflow to run [pkgcheck](https://wiki.gentoo.org/wiki/Pkgcheck) on an Overlay after every `push`
 and on a schedule:
 
 ```yaml
@@ -22,5 +22,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - uses: hacking-gentoo/action-repoman@master
+    - uses: bobwya/action-pkgcheck-ci@master
 ```
