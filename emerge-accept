@@ -2,16 +2,14 @@
 
 set -eu
 
-if ! emerge -p "${@}"
-then
+if ! emerge -p "${@}"; then
 	emerge --autounmask-write "${@}" || :
 
-	find '/etc/portage' -name '._cfg*' | while read l
-	do
-		dirname="$(dirname "${l}")"
-		filename="$(basename "${l}" | cut -d _ -f 3-)"
+	find '/etc/portage' -name '._cfg*' | while read -r chg_config; do
+		dirname="$(dirname "${chg_config}")"
+		filename="$(basename "$chg_config}" | cut -d _ -f 3-)"
 
-		mv "${l}" "${dirname}/${filename}"
+		mv "${chg_config}" "${dirname}/${filename}"
 	done
 fi
 
