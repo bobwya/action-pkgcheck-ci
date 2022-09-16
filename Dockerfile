@@ -16,8 +16,8 @@ RUN echo 'PORTAGE_IONICE_COMMAND="ionice -c 3 -p \${PID}"' >> /etc/portage/make.
 RUN mkdir -p '/etc/portage/package.mask'
 
 RUN emerge -v sys-apps/portage
-RUN emerge -v app-portage/repoman
+RUN emerge -v dev-util/pkgcheck
 RUN emerge -v dev-vcs/git
 
-COPY repoman_test.sh /repoman_test.sh
-ENTRYPOINT ["/repoman_test.sh"]
+COPY pkgcheck_ci.sh /pkgcheck_ci.sh
+ENTRYPOINT ["/pkgcheck_ci.sh"]
