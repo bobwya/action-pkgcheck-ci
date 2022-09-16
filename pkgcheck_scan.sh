@@ -16,4 +16,4 @@ which pkgcheck
 pwd
 ls -ahl
 
-PORTDIR_OVERLAY="." pkgcheck ci || die "pkgcheck ci failed"
+PORTDIR_OVERLAY="." pkgcheck scan --exit error || die "pkgcheck scan failed"
