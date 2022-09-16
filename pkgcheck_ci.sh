@@ -11,9 +11,9 @@ function die()
 [[ -z "${GITHUB_WORKSPACE}" ]] && die "Must set GITHUB_WORKSPACE in env"
 cd "${GITHUB_WORKSPACE}" || die "GITHUB_WORKSPACE does not exist" 
 
-emerge -p1v app-portage/repoman
-which repoman
+emerge -p1v dev-util/pkgcheck
+which pkgcheck
 pwd
 ls -ahl
 
-PORTDIR_OVERLAY="." repoman --straight-to-stable -dx full || die "repoman failed"
+PORTDIR_OVERLAY="." pkgcheck ci || die "pkgcheck ci failed"
