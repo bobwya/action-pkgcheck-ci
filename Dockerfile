@@ -19,5 +19,5 @@ RUN emerge -v sys-apps/portage
 RUN emerge -v dev-util/pkgcheck
 RUN emerge -v dev-vcs/git
 
-COPY pkgcheck_ci.sh /pkgcheck_ci.sh
-ENTRYPOINT ["/pkgcheck_ci.sh"]
+COPY pkgcheck_scan.sh /pkgcheck_scan.sh
+ENTRYPOINT ["/pkgcheck_scan.sh"]
