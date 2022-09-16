@@ -1,5 +1,5 @@
-name: 'action-pkgcheck-ci'
-description: 'Run pkgcheck ci on a repository'
+name: 'action-pkgcheck-scan'
+description: 'Run pkgcheck scan on a repository'
 runs:
   using: 'docker'
   image: 'Dockerfile'
