@@ -1,6 +1,6 @@
-# action-pkgcheck-ci
+# action-pkgcheck-scan
 
-Automatically run pkgcheck ci on a Gentoo Overlay and report all QA errors.
+Automatically run pkgcheck scan on a Gentoo Overlay and report all QA errors.
 
 ## Basic Usage
 
@@ -22,5 +22,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - uses: bobwya/action-pkgcheck-ci@master
+    - uses: bobwya/action-pkgcheck-scan@master
 ```
